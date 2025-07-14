@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+
 interface Content {
   id: string;
   type: 'image' | 'vide' | 'text' | 'html';
@@ -46,6 +48,49 @@ const Index = () => {
   };
 
   const handlePlayToggle = () => {
-    setIsPlaying(!isPlaying)
+    setIsPlaying(!isPlaying);
   }
+
+  const handlePreview = () => {
+    setCurrentView('preview');
+  }
+
+  if (currentView === 'display') {
+    return (
+      <div className="relative">
+        <SignageDisplay
+          content={content}
+          autoPlay={isPlaying}
+          showControls={true}
+        />
+        <Button
+          onClick={() => setCurrentView('dashboard')}
+        >
+          <Settings/>
+          Dashboard
+        </Button>
+      </div>
+    );
+  }
+
+  if (currentView === 'preview') {
+
+  }
+
+  return (
+    <div className="">
+      <div className="">
+        <div className="">
+
+          <div className="">
+            <div className="">
+              <h1 className="">Digital Signage</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
+
+export default Index;
