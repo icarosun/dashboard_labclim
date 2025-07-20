@@ -148,10 +148,7 @@ export function SignageDashboard({
       <Tabs defaultValue="content" className="space-y-6">
         <TabsList className="grid w-full grid-cols-4">
           <TabsTrigger value="content">Conteúdo</TabsTrigger>
-          <TabsTrigger value="schedule">Programação</TabsTrigger>
-          <TabsTrigger value="analytics">Analytics</TabsTrigger>
-          <TabsTrigger value="settings">Configurações</TabsTrigger>
-        </TabsList>
+       </TabsList>
 
         <TabsContent value="content" className="space-y-6">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -383,58 +380,7 @@ export function SignageDashboard({
             </div>
           </div>
         </TabsContent>
-
-        <TabsContent value="schedule">
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center space-x-2">
-                <Calendar className="w-5 h-5" />
-                <span>Programação de Conteúdo</span>
-              </CardTitle>
-              <CardDescription>
-                Configure quando e como o conteúdo será exibido
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="text-center py-8 text-muted-foreground">
-                Funcionalidade de programação em desenvolvimento
-              </div>
-            </CardContent>
-          </Card>
-        </TabsContent>
-
-        <TabsContent value="analytics">
-          <Card>
-            <CardHeader>
-              <CardTitle>Analytics</CardTitle>
-              <CardDescription>
-                Métricas de engajamento e performance
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="text-center py-8 text-muted-foreground">
-                Dashboard de analytics em desenvolvimento
-              </div>
-            </CardContent>
-          </Card>
-        </TabsContent>
-
-        <TabsContent value="settings">
-          <Card>
-            <CardHeader>
-              <CardTitle>Configurações</CardTitle>
-              <CardDescription>
-                Configure o comportamento do sistema
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="text-center py-8 text-muted-foreground">
-                Configurações em desenvolvimento
-              </div>
-            </CardContent>
-          </Card>
-        </TabsContent>
-      </Tabs>
+     </Tabs>
     </div>
   );
 }
