@@ -144,56 +144,6 @@ const Index = () => {
         <div className="absolute bottom-1/4 left-1/3 w-12 h-12 bg-gradient-primary rounded-full opacity-50 animate-float" style={{ animationDelay: '2s' }} />
       </div>
 
-      {/* Features Grid */}
-      <div className="py-24 bg-background">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight gradient-text sm:text-4xl">
-              Funcionalidades Principais
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Tudo que você precisa para criar experiências digitais impactantes
-            </p>
-          </div>
-
-          <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-              {[
-                {
-                  icon: Monitor,
-                  title: 'Touch Screen Interativo',
-                  description: 'Interface responsiva com suporte a gestos touch, navegação intuitiva e feedback visual em tempo real.'
-                },
-                {
-                  icon: Settings,
-                  title: 'Gestão de Conteúdo',
-                  description: 'Dashboard completo para criar, editar e programar conteúdo com diferentes tipos de mídia.'
-                },
-                {
-                  icon: Play,
-                  title: 'Reprodução Automática',
-                  description: 'Sistema de playlist com transições suaves, controle de tempo e pausas para interação.'
-                }
-              ].map((feature) => (
-                <Card key={feature.title} className="interactive-hover">
-                  <CardContent className="p-8">
-                    <dt className="text-base font-semibold leading-7">
-                      <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-lg bg-gradient-primary">
-                        <feature.icon className="h-8 w-8 text-white" aria-hidden="true" />
-                      </div>
-                      {feature.title}
-                    </dt>
-                    <dd className="mt-4 text-base leading-7 text-muted-foreground">
-                      {feature.description}
-                    </dd>
-                  </CardContent>
-                </Card>
-              ))}
-            </dl>
-          </div>
-        </div>
-      </div>
-
       {/* Dashboard Section */}
       <div className="border-t border-border">
         <SignageDashboard
