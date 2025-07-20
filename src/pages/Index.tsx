@@ -65,13 +65,14 @@ const Index = () => {
       <div className="relative">
         <SignageDisplay
           content={content}
-          autoPlay={isPlaying}
-          showControls={true}
+          autoPlay={true}
+          showControls={false}
         />
         <Button
           onClick={() => setCurrentView('dashboard')}
+          className="absolute top-4 left-4 z-50 bg-black/80 backdrop-blur-sm border-white/20 text-white hover:bg-black/90"
         >
-          <Settings/>
+          <Settings className="w-4 h-4 mr-2"/>
           Dashboard
         </Button>
       </div>
@@ -83,8 +84,8 @@ const Index = () => {
       <div className="relative">
         <SignageDisplay
           content={content}
-          autoPlay={true}
-          showControls={false}
+          autoPlay={false}
+          showControls={true}
         />
         <div className="absolute top-4 left-4 z-50 flex space-x-2">
           <Button
@@ -117,10 +118,6 @@ const Index = () => {
             <h1 className="text-4xl font-bold tracking-tight gradient-text sm:text-6xl">
               Digital Signage
             </h1>
-            <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              Sistema avançado de sinalização digital com interações touch screen, 
-              gestão de conteúdo em tempo real e analytics detalhados.
-            </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Button 
                 onClick={() => setCurrentView('display')}
